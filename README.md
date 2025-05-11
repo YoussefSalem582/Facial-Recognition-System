@@ -52,6 +52,9 @@ facial-recognition-system/
 │   ├── recognition/         # Recognition algorithms
 │   ├── utils/               # Utility functions
 │   └── app.py               # Main application entry point
+├── Milestone 1/             # Milestone 1 Folder
+│   ├── Facial Recognition System Mialiston One.pdf               # Report of Milestone one
+│   └── Milestone_1_Data_Collection,_Exploration,_and_Preprocessing.ipynb               # Milestone 1 Notebook .ipynb file
 ├── faces_train/             # Training dataset
 ├── faces_test/              # Testing dataset
 ├── faces/                   # Sample face images
