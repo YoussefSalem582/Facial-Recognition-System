@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+        img {
+            max-width: 500px;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Recognition Web App</h1>
+
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="photo" accept="image/*" required>
+        <button type="submit">Upload & Recognize</button>
+    </form>
+
+    {% if result_path %}
+        <h3>Uploaded Image Result:</h3>
+        <img src="{{ url_for('static', filename='result.jpg') }}" alt="Result Image">
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <h3>Live Camera Feed:</h3>
+    <img src="{{ url_for('video') }}" width="720" alt="Live feed">
+
+</body>
+</html>
