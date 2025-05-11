@@ -179,10 +179,11 @@ python scripts/evaluate.py --test-dir path/to/test_data --model models/facenet_c
 
 This project was developed by:
 
-- Youssef Salem - [@YoussefSalem582](https://github.com/YoussefSalem582)
-- Mostafa Eleimy - [@MostafaEleimy](https://github.com/MostafaEleimy)
 - Ahmed Elrashidy - [@AhmedElrashidy11](https://github.com/AhmedElrashidy11)
 - Ahmed Elsisi - [@ahmed-elsisi](https://github.com/ahmed-elsisi)
+- Mostafa Eleimy - [@MostafaEleimy](https://github.com/MostafaEleimy)
+- Youssef Ayman
+- Youssef Salem - [@YoussefSalem582](https://github.com/YoussefSalem582)
 
 ## 🤝 Contributions
 
@@ -202,10 +203,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-- Youssef Salem - [@YoussefSalem582](https://github.com/YoussefSalem582) - youssefSalem@example.com
-- Mostafa Eleimy - [@MostafaEleimy](https://github.com/MostafaEleimy)
 - Ahmed Elrashidy - [@AhmedElrashidy11](https://github.com/AhmedElrashidy11)
 - Ahmed Elsisi - [@ahmed-elsisi](https://github.com/ahmed-elsisi)
+- Mostafa Eleimy - [@MostafaEleimy](https://github.com/MostafaEleimy)
+- Youssef Ayman
+- Youssef Salem - [@YoussefSalem582](https://github.com/YoussefSalem582)
 
 Project Link: [https://github.com/YoussefSalem582/Facial-Recognition-System](https://github.com/YoussefSalem582/Facial-Recognition-System)
 
