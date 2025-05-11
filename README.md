@@ -175,6 +175,15 @@ python scripts/evaluate.py --test-dir path/to/test_data --model models/facenet_c
 - [ ] REST API for cloud deployment
 - [ ] Adversarial attack detection and prevention
 
+## 👥 Contributors
+
+This project was developed by:
+
+- Youssef Salem - [@YoussefSalem582](https://github.com/YoussefSalem582)
+- Mostafa Eleimy - [@MostafaEleimy](https://github.com/MostafaEleimy)
+- Ahmed Elrashidy - [@AhmedElrashidy11](https://github.com/AhmedElrashidy11)
+- Ahmed Elsisi - [@ahmed-elsisi](https://github.com/ahmed-elsisi)
+
 ## 🤝 Contributions
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -193,7 +202,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-Youssef Salem - [@YoussefSalem582](https://github.com/YoussefSalem582) - youssefSalem@example.com
+- Youssef Salem - [@YoussefSalem582](https://github.com/YoussefSalem582) - youssefSalem@example.com
+- Mostafa Eleimy - [@MostafaEleimy](https://github.com/MostafaEleimy)
+- Ahmed Elrashidy - [@AhmedElrashidy11](https://github.com/AhmedElrashidy11)
+- Ahmed Elsisi - [@ahmed-elsisi](https://github.com/ahmed-elsisi)
 
 Project Link: [https://github.com/YoussefSalem582/Facial-Recognition-System](https://github.com/YoussefSalem582/Facial-Recognition-System)
 
