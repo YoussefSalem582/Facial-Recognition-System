@@ -1,13 +1,6 @@
 # Facial Recognition System
 
-[![GitHub license](https://img.shields.io/github/license/YoussefSalem582/Facial-Recognition-System?style=flat-square)](https://github.com/YoussefSalem582/Facial-Recognition-System/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/YoussefSalem582/Facial-Recognition-System?style=flat-square)](https://github.com/YoussefSalem582/Facial-Recognition-System/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/YoussefSalem582/Facial-Recognition-System?style=flat-square)](https://github.com/YoussefSalem582/Facial-Recognition-System/network)
-[![GitHub issues](https://img.shields.io/github/issues/YoussefSalem582/Facial-Recognition-System?style=flat-square)](https://github.com/YoussefSalem582/Facial-Recognition-System/issues)
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/YoussefSalem582/Facial-Recognition-System/main/docs/system_overview.png" alt="Facial Recognition System" width="600"/>
-</p>
+[![Visits](https://img.shields.io/badge/dynamic/json?color=blue&label=visits&query=value&url=https://api.countapi.xyz/hit/YoussefSalem582/Facial-Recognition-System)](https://github.com/YoussefSalem582/Facial-Recognition-System)
 
 ## 📋 Overview
 
