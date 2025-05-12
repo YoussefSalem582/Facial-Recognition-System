@@ -1,6 +1,5 @@
 # Facial Recognition System
 
-[![Visits](https://img.shields.io/badge/dynamic/json?color=blue&label=visits&query=value&url=https://api.countapi.xyz/hit/YoussefSalem582/Facial-Recognition-System)](https://github.com/YoussefSalem582/Facial-Recognition-System)
 
 ## 📋 Overview
 
