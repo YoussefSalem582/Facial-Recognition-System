@@ -3,36 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <title>Face Recognition Web App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 40px;
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c, #0d0d0d);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
         }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 40px 0 30px;
+            color: #da0000;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            width: 100%;
+            max-width: 1300px;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1;
+            background-color: #0d0d0d;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #8a8a8a;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #da0000;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        input[type="file"] {
+            background: #1a1a1a;
+            border: 1px solid #8a8a8a;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #da0000;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1rem;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #b30000;
+            transform: scale(1.03);
+        }
+
+        .image-box {
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #8a8a8a;
+        }
+
         img {
-            max-width: 500px;
-            border: 2px solid #ccc;
-            margin-top: 20px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            color: #ff4d4d;
+            font-weight: 500;
+            font-family: 'Outfit', sans-serif;
         }
     </style>
 </head>
 <body>
     <h1>Face Recognition Web App</h1>
 
-    <form method="POST" action="/upload" enctype="multipart/form-data">
-        <input type="file" name="photo" accept="image/*" required>
-        <button type="submit">Upload & Recognize</button>
-    </form>
+    <div class="container">
+        <div class="box">
+            <div class="section-title">Live Camera Feed</div>
+            <div class="image-box">
+                <img src="{{ url_for('video') }}" alt="Live feed">
+            </div>
+        </div>
 
-    {% if result_path %}
-        <h3>Uploaded Image Result:</h3>
-        <img src="{{ url_for('static', filename='result.jpg') }}" alt="Result Image">
-    {% elif error %}
-        <p style="color: red;">{{ error }}</p>
-    {% endif %}
+        <div class="box">
+            <div class="section-title">Upload an Image</div>
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+                <input type="file" name="photo" accept="image/*" required>
+                <button type="submit">Upload & Recognize</button>
+            </form>
 
-    <h3>Live Camera Feed:</h3>
-    <img src="{{ url_for('video') }}" width="720" alt="Live feed">
+            {% if result_path %}
+                <div class="section-title" style="margin-top: 30px;">Recognition Result</div>
+                <div class="image-box">
+                    <img src="{{ url_for('static', filename='result.jpg') }}" alt="Result Image">
+                </div>
+            {% elif error %}
+                <p>{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
 
 </body>
 </html>
