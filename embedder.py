@@ -20,7 +20,7 @@ original_faces_dir = "faces"
 train_dir = "faces_train"
 test_dir = "faces_test"
 
-# Helpers
+# Helper Funcs
 def cosine_similarity(a, b):
     return np.dot(a, b) / (norm(a) * norm(b))
 
