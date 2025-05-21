@@ -20,7 +20,7 @@ original_faces_dir = "faces"
 train_dir = "faces_train"
 test_dir = "faces_test"
 
-# Helper Funcs
+# Helpers
 def cosine_similarity(a, b):
     return np.dot(a, b) / (norm(a) * norm(b))
 
@@ -124,7 +124,7 @@ for person in os.listdir(test_dir):
         img_path = os.path.join(person_path, img)
         tasks.append((person, img_path))
 
-with ThreadPoolExecutor(max_workers=8) as executor:
+with ThreadPoolExecutor(max_workers=6) as executor:
     futures = {executor.submit(predict_image, person, path): (person, path) for person, path in tasks}
     for future in as_completed(futures):
         result = future.result()
