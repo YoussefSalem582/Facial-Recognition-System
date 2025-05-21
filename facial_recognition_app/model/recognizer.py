@@ -27,8 +27,15 @@ def recognize_faces_on_image(image_path, output_path, face_db, threshold=0.7):
                 name = db_name
         if best_score >= threshold:
             x1, y1, x2, y2 = map(int, face.bbox)
-            cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            cv2.putText(img, name, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+            box_thickness = max(2, int((y2 - y1) * 0.01))
+            font_scale = max(0.6, (y2 - y1) / 100.0)
+            font_thickness = 3
+            cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), box_thickness)
+            cv2.putText(img, name, (x1, y1 - 55), cv2.FONT_HERSHEY_SIMPLEX,
+            font_scale, (0, 255, 0), font_thickness)
+            cv2.putText(img, f"{best_score:.2f}", (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,
+            font_scale * 0.85, (0, 255, 0), font_thickness)
+
     cv2.imwrite(output_path, img)
 
 def recognize_faces_on_frame(frame, face_db, threshold=0.7):
@@ -44,6 +51,12 @@ def recognize_faces_on_frame(frame, face_db, threshold=0.7):
                 name = db_name
         if best_score >= threshold:
             x1, y1, x2, y2 = map(int, face.bbox)
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            cv2.putText(frame, name, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+            box_thickness = 2
+            font_scale = max(0.6, (y2 - y1) / 200.0)
+            font_thickness = 2
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), box_thickness)
+            cv2.putText(frame, name, (x1, y1 - 25), cv2.FONT_HERSHEY_SIMPLEX,
+            font_scale, (0, 255, 0), font_thickness)
+            cv2.putText(frame, f"{best_score:.2f}", (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,
+            font_scale * 0.65, (0, 255, 0), font_thickness)
     return frame
